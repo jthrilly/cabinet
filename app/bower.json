@@ -1,0 +1,19 @@
+{
+  "name": "cabinet",
+  "version": "0.0.1",
+  "authors": [
+    "Joshua Melville <joshmelville@gmail.com>"
+  ],
+  "main": "views/index.html",
+  "moduleType": [
+    "node"
+  ],
+  "license": "GPL",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
