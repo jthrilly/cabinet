@@ -13,9 +13,8 @@ var App = function App() {
           opening = true;
           console.log('tapped');
           $(e.target).addClass('front');
-          $('.blackout').fadeToggle();
-
           if (!overlayOpen) {
+              $('.blackout').fadeIn();
               app.openOverlay(e.target);
           } else {
               app.closeOverlay(e.target);
@@ -39,7 +38,7 @@ var App = function App() {
           opening = false;
           overlayOpen = true;
           $('.cabinet-item').removeClass('front');
-      }, 500);
+      }, 400);
   };
 
   app.closeOverlay = function(target) {
@@ -50,6 +49,7 @@ var App = function App() {
           opening = false;
           overlayOpen = false;
           $('.cabinet-item').removeClass('front');
+          $('.blackout').fadeOut();
       }, 1000);
   };
 
