@@ -7,13 +7,14 @@ var App = function App() {
   var resetTimer;
   var overlayOpen = false;
 
-  function tapHandler() {
-    console.log('yo');
+  function tapHandler(e) {
+    $(e.target).toggleClass('active');
+    $('.overlay').toggleClass('active');
   }
 
   app.init = function() {
 
-      $('.item-1').hammer().bind("tap", tapHandler);
+      $('.cabinet-item').hammer().bind("tap", tapHandler);
 
       app.resetTimer();
 
