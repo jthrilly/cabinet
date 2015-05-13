@@ -1,0 +1,1 @@
+var App=function e(){function e(){console.log("yo")}var n={},t,o=!1;return n.init=function(){$(".item-1").hammer().bind("tap",e),n.resetTimer()},n.showItem=function(e){},n.openOverlay=function(){},n.closeOverlay=function(){},n.toggleOverlay=function(){o?n.closeOverlay():n.openOverlay()},n.reset=function(){},n.resetTimer=function(){t=setInterval(function(){n.reset()},9e5)},n};
