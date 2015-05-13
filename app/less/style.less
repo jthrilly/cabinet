@@ -1,6 +1,14 @@
 @import '../bower_components/bootstrap/less/bootstrap.less';
 @import '../less/variables.less';
 
+* {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
+
 body, html {
     padding:0;
     margin:0;
@@ -12,6 +20,7 @@ body {
     text-rendering: optimizeLegibility;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
+    overflow:hidden;
 
 }
 
@@ -23,20 +32,40 @@ img {
     max-height:100%;
 }
 
+.front {
+    z-index:999 !important;
+}
+
+.blackout {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background: rgba(0,0,0,0.7);
+    display:none;
+    z-index:21;
+
+}
+
 .cabinet {
     background:url('../img/cabinet4.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     height:1920px;
     width:1080px;
+
 }
 
 .cabinet-item {
     position: absolute;
-    top: 200px;
-    left: 300px;
+    top: 50px;
+    left: 240px;
     display:inline-block;
-    transition: all 0.5s ease-in-out;
+    transition: all 1s ease-in-out;
+    cursor:pointer;
+    z-index:20;
+
 }
 
 .cabinet-item img {
@@ -44,25 +73,50 @@ img {
 }
 
 .cabinet-item.item-1 {
-    transform: translate(-290px, -200px) scale(0.5);
+    transform: translate(-290px, -22px) scale(0.5);
 }
 
 .cabinet-item.item-2 {
-    transform: translate(260px, -200px) scale(0.5);
+    transform: translate(260px, -22px) scale(0.5);
+}
+
+.cabinet-item.item-3 {
+    transform: translate(-290px, 445px) scale(0.5);
+}
+
+.cabinet-item.item-4 {
+    transform: translate(260px, 440px) scale(0.5);
+}
+
+.cabinet-item.item-5 {
+    transform: translate(260px, 918px) scale(0.5);
+}
+
+.cabinet-item.item-6 {
+    transform: translate(-290px, 918px) scale(0.5);
+}
+
+.cabinet-item.item-7 {
+    transform: translate(260px, 1404px) scale(0.5);
+}
+
+.cabinet-item.item-8 {
+    transform: translate(-290px, 1404px) scale(0.5);
 }
 
 .cabinet-item.active {
     z-index:999;
-    transform: translate(0px, -200px) scale(1);
+    transform: translate(0px, 0px) scale(1);
 }
 
 .overlay {
+    z-index:10;
     position:absolute;
     top:0;
     left:0;
     opacity:0;
-    transform: translate(0,520px);
-    transition: all 0.5s ease-in-out;
+    transform: translate(0,1020px);
+    transition: all 1s ease-in-out 0.2s;
     width:1080px;
     height:1920px;
     background:url('../img/paper2.png');
@@ -71,6 +125,7 @@ img {
 }
 
 .overlay.active {
+    z-index:30;
     opacity:1;
     transform: translate(0px,0px);
 }

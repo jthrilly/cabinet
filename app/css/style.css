@@ -6494,6 +6494,14 @@ button.close {
     display: none !important;
   }
 }
+* {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+}
 body,
 html {
   padding: 0;
@@ -6509,12 +6517,26 @@ body {
   -webkit-font-kerning: normal;
      -moz-font-kerning: normal;
           font-kerning: normal;
+  overflow: hidden;
 }
 p {
   margin: 0 0 42px;
 }
 img {
   max-height: 100%;
+}
+.front {
+  z-index: 999 !important;
+}
+.blackout {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 21;
 }
 .cabinet {
   background: url('../img/cabinet4.jpg');
@@ -6525,41 +6547,74 @@ img {
 }
 .cabinet-item {
   position: absolute;
-  top: 200px;
-  left: 300px;
+  top: 50px;
+  left: 240px;
   display: inline-block;
-  -webkit-transition: all 0.5s ease-in-out;
-          transition: all 0.5s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+          transition: all 1s ease-in-out;
+  cursor: pointer;
+  z-index: 20;
 }
 .cabinet-item img {
   margin: 0 auto;
 }
 .cabinet-item.item-1 {
-  -webkit-transform: translate(-290px, -200px) scale(0.5);
-      -ms-transform: translate(-290px, -200px) scale(0.5);
-          transform: translate(-290px, -200px) scale(0.5);
+  -webkit-transform: translate(-290px, -22px) scale(0.5);
+      -ms-transform: translate(-290px, -22px) scale(0.5);
+          transform: translate(-290px, -22px) scale(0.5);
 }
 .cabinet-item.item-2 {
-  -webkit-transform: translate(260px, -200px) scale(0.5);
-      -ms-transform: translate(260px, -200px) scale(0.5);
-          transform: translate(260px, -200px) scale(0.5);
+  -webkit-transform: translate(260px, -22px) scale(0.5);
+      -ms-transform: translate(260px, -22px) scale(0.5);
+          transform: translate(260px, -22px) scale(0.5);
+}
+.cabinet-item.item-3 {
+  -webkit-transform: translate(-290px, 445px) scale(0.5);
+      -ms-transform: translate(-290px, 445px) scale(0.5);
+          transform: translate(-290px, 445px) scale(0.5);
+}
+.cabinet-item.item-4 {
+  -webkit-transform: translate(260px, 440px) scale(0.5);
+      -ms-transform: translate(260px, 440px) scale(0.5);
+          transform: translate(260px, 440px) scale(0.5);
+}
+.cabinet-item.item-5 {
+  -webkit-transform: translate(260px, 918px) scale(0.5);
+      -ms-transform: translate(260px, 918px) scale(0.5);
+          transform: translate(260px, 918px) scale(0.5);
+}
+.cabinet-item.item-6 {
+  -webkit-transform: translate(-290px, 918px) scale(0.5);
+      -ms-transform: translate(-290px, 918px) scale(0.5);
+          transform: translate(-290px, 918px) scale(0.5);
+}
+.cabinet-item.item-7 {
+  -webkit-transform: translate(260px, 1404px) scale(0.5);
+      -ms-transform: translate(260px, 1404px) scale(0.5);
+          transform: translate(260px, 1404px) scale(0.5);
+}
+.cabinet-item.item-8 {
+  -webkit-transform: translate(-290px, 1404px) scale(0.5);
+      -ms-transform: translate(-290px, 1404px) scale(0.5);
+          transform: translate(-290px, 1404px) scale(0.5);
 }
 .cabinet-item.active {
   z-index: 999;
-  -webkit-transform: translate(0px, -200px) scale(1);
-      -ms-transform: translate(0px, -200px) scale(1);
-          transform: translate(0px, -200px) scale(1);
+  -webkit-transform: translate(0px, 0px) scale(1);
+      -ms-transform: translate(0px, 0px) scale(1);
+          transform: translate(0px, 0px) scale(1);
 }
 .overlay {
+  z-index: 10;
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
-  -webkit-transform: translate(0, 520px);
-      -ms-transform: translate(0, 520px);
-          transform: translate(0, 520px);
-  -webkit-transition: all 0.5s ease-in-out;
-          transition: all 0.5s ease-in-out;
+  -webkit-transform: translate(0, 1020px);
+      -ms-transform: translate(0, 1020px);
+          transform: translate(0, 1020px);
+  -webkit-transition: all 1s ease-in-out 0.2s;
+          transition: all 1s ease-in-out 0.2s;
   width: 1080px;
   height: 1920px;
   background: url('../img/paper2.png');
@@ -6567,6 +6622,7 @@ img {
   background-repeat: no-repeat;
 }
 .overlay.active {
+  z-index: 30;
   opacity: 1;
   -webkit-transform: translate(0px, 0px);
       -ms-transform: translate(0px, 0px);

@@ -6,31 +6,51 @@ var App = function App() {
   var app = {};
   var resetTimer;
   var overlayOpen = false;
+  var opening = false;
 
   function tapHandler(e) {
-    $(e.target).toggleClass('active');
-    $('.overlay').toggleClass('active');
+      if (!opening) {
+          opening = true;
+          console.log('tapped');
+          $(e.target).addClass('front');
+          $('.blackout').fadeToggle();
+
+          if (!overlayOpen) {
+              app.openOverlay(e.target);
+          } else {
+              app.closeOverlay(e.target);
+          }
+
+      } else {
+          return false;
+      }
+
   }
 
   app.init = function() {
-
       $('.cabinet-item').hammer().bind("tap", tapHandler);
-
-      app.resetTimer();
-
   };
 
-  app.showItem = function(item) {
-
+  app.openOverlay = function(target) {
+      setTimeout(function () {
+          console.log('openoverlay');
+          $(target).toggleClass('active');
+          $('.overlay').toggleClass('active');
+          opening = false;
+          overlayOpen = true;
+          $('.cabinet-item').removeClass('front');
+      }, 500);
   };
 
-
-  app.openOverlay = function() {
-
-  };
-
-  app.closeOverlay = function() {
-
+  app.closeOverlay = function(target) {
+      $(target).toggleClass('active');
+      $('.overlay').toggleClass('active');
+      console.log('closeoverlay');
+      setTimeout(function () {
+          opening = false;
+          overlayOpen = false;
+          $('.cabinet-item').removeClass('front');
+      }, 1000);
   };
 
   app.toggleOverlay = function() {

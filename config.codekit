@@ -2994,6 +2994,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/app\/img\/prop2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 106626,
+		"inputAbbreviatedPath": "\/app\/img\/prop2.png",
+		"outputAbbreviatedPath": "\/app\/img\/prop2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/app\/img\/prop3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 246371,
+		"inputAbbreviatedPath": "\/app\/img\/prop3.jpg",
+		"outputAbbreviatedPath": "\/app\/img\/prop3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/app\/img\/prop3.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 374558,
+		"inputAbbreviatedPath": "\/app\/img\/prop3.png",
+		"outputAbbreviatedPath": "\/app\/img\/prop3.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/app\/js\/main.js": {
 		"fileType": 64,
 		"ignore": 0,
