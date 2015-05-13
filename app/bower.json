@@ -19,6 +19,7 @@
   "dependencies": {
     "bootstrap": "~3.3.4",
     "hammerjs": "~2.0.4",
-    "jquery-hammerjs": "~2.0.0"
+    "jquery-hammerjs": "~2.0.0",
+    "fontawesome": "~4.3.0"
   }
 }

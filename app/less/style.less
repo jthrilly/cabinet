@@ -1,5 +1,8 @@
 @import '../bower_components/bootstrap/less/bootstrap.less';
+@import '../bower_components/fontawesome/less/font-awesome.less';
 @import '../less/variables.less';
+
+@fa-font-path:        "../bower_components/fontawesome/fonts";
 
 * {
     -webkit-user-select: none;
@@ -30,6 +33,13 @@ p {
 
 img {
     max-height:100%;
+}
+
+.back {
+    position:absolute;
+    top:20px;
+    left:30px;
+    cursor:pointer;
 }
 
 .front {
@@ -139,6 +149,9 @@ img {
     font-feature-settings:"dlig";
     font-style:italic;
     font-weight:600;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    margin-bottom:1em;
 }
 
 .content-row {
@@ -147,4 +160,16 @@ img {
     left:60px;
     right:60px;
     // height:70%;
+}
+
+.content-row > * {
+    transition: all 0.7s ease-out;
+    opacity:0;
+    transform: translate(-300px,0px);
+}
+
+
+.para-shown {
+    opacity:1;
+    transform: translate(0px,0px);
 }
