@@ -23,11 +23,12 @@ var App = function App() {
   function tapHandler(e) {
       if (!opening) {
           opening = true;
-          console.log('tapped');
-          $(e.target).addClass('front');
           if (!overlayOpen) {
               $('.blackout').fadeIn();
-              currentItem = e.target;
+              console.log($(e.target).attr('class').split(' '));
+              currentItem = $(e.target).attr('class').split(' ').pop(); // This will put the last class name (item-n) in the currentItem var. Not a jQuery object though!
+              console.log('current item is:'+ currentItem);
+              $(e.target).addClass('front');
               app.openOverlay();
           } else {
               app.closeOverlay();
@@ -46,28 +47,31 @@ var App = function App() {
   };
 
   app.openOverlay = function() {
-      setTimeout(function () {
-          console.log('openoverlay');
-          $(currentItem).toggleClass('active');
-          $('.overlay').toggleClass('active');
-          opening = false;
-          overlayOpen = true;
-          $('.cabinet-item').removeClass('front');
+
+      // Ajax load the item content into the container div
+      $('.item-content').load( "../items/"+currentItem+".html", function() {
+          // Once we are finished loading, set up the animation stuff
           setTimeout(function () {
-              $.each($('.content-row > *'), function(index, value) {
-                  setTimeout(function () {
-                      $(value).addClass('para-shown');
-                  }, (index+2)*350);
-              });
+              $("."+currentItem).toggleClass('active');
+              $('.overlay').toggleClass('active');
+              opening = false;
+              overlayOpen = true;
+              $('.cabinet-item').removeClass('front');
+              setTimeout(function () {
+                  $.each($('.content-row > *'), function(index, value) {
+                      setTimeout(function () {
+                          $(value).addClass('para-shown');
+                      }, (index+2)*350);
+                  });
+              }, 400);
           }, 400);
-      }, 400);
+      });
   };
 
   app.closeOverlay = function() {
-      $(currentItem).toggleClass('active');
+      $("."+currentItem).toggleClass('active');
       $('.overlay').toggleClass('active');
       $('.content-row > *').removeClass('para-shown');
-      console.log('closeoverlay');
       setTimeout(function () {
           opening = false;
           overlayOpen = false;
