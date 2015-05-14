@@ -11,7 +11,7 @@
             </video>
         </div>
         <div class="swiper-slide">
-            <video width="1080px" height="100%" autoplay loop>
+            <video width="1080px" height="100%" autoplay loop muted>
               <source src="../img/video2.webm" type="video/mp4">
             </video>
         </div>
@@ -30,12 +30,134 @@
     <h1>A Story About a Lamp</h1>
     <p>Id labore quis aute nulla adipisicing. Aute Lorem excepteur id veniam ipsum labore aute irure velit minim. Labore do laboris laborum excepteur voluptate occaecat tempor mollit. Sunt ullamco ullamco occaecat dolor excepteur dolore quis id excepteur adipisicing minim. Esse adipisicing consequat pariatur voluptate laborum qui. Occaecat ullamco tempor aute culpa sunt irure sunt dolore non. Lorem occaecat minim adipisicing in in exercitation amet excepteur. Exercitation pariatur sunt sit ex nostrud consequat dolore quis consequat consectetur exercitation consequat ullamco laborum.</p>
     <p>Reprehenderit sit veniam amet cupidatat consequat in sit consequat ad commodo Lorem sunt enim voluptate. Eu occaecat aute Lorem quis occaecat magna. Duis non et enim culpa quis dolor aliqua nulla eu aliqua commodo ipsum. Ullamco commodo tempor dolor ea id consequat duis pariatur nulla. Veniam nulla fugiat excepteur eu sit proident in. Deserunt reprehenderit labore excepteur anim nisi ut qui et labore esse. Ex ipsum consectetur elit cupidatat anim eiusmod officia irure culpa officia elit mollit culpa. Dolore ad ad incididunt cillum culpa qui dolore ipsum cupidatat aliquip duis enim nisi. Ex est Lorem irure voluptate pariatur sunt eu ut aute ipsum.</p>
-    <p class='text-center'>
-        <button class="btn btn-primary btn-lg">Related Research</button>
-    </p>
 </div>
-
+<div class="overlay-blackout"></div>
+<div class="more-content button">
+    <!-- <div class="more-close">
+        <i class="fa fa-times fa-2x"></i>
+    </div> -->
+    <h3 class="button-text">Related Research</h3>
+    <div class="more-content-text">
+        <div class="qr-row">
+            <div class="qr-col">
+                <div class="qrcode" id="qrcode1"></div>
+                <script type="text/javascript">
+                    new QRCode(document.getElementById("qrcode1"), {
+                        text: "http://oii.ox.ac.uk",
+                        width: 128,
+                        height: 128
+                    });
+                </script>
+            </div>
+            <div class="col-sm-8">
+                <h5>This is some serious explanation.</h5>
+                <h4>http://oii.ox.ac.uk</h4>
+            </div>
+        </div>
+        <div class="qr-row">
+            <div class="qr-col">
+                <div class="qrcode" id="qrcode2"></div>
+                <script type="text/javascript">
+                    new QRCode(document.getElementById("qrcode2"), {
+                        text: "http://oii.ox.ac.uk",
+                        width: 128,
+                        height: 128
+                    });
+                </script>
+            </div>
+            <div class="col-sm-8">
+                <h5>This is some serious explanation.</h5>
+                <h4>http://oii.ox.ac.uk</h4>
+            </div>
+        </div>
+        <div class="qr-row">
+            <div class="qr-col">
+                <div class="qrcode" id="qrcode3"></div>
+                <script type="text/javascript">
+                    new QRCode(document.getElementById("qrcode3"), {
+                        text: "http://oii.ox.ac.uk",
+                        width: 128,
+                        height: 128
+                    });
+                </script>
+            </div>
+            <div class="col-sm-8">
+                <h5>This is some serious explanation.</h5>
+                <h4>http://oii.ox.ac.uk</h4>
+            </div>
+        </div>
+        <div class="qr-row">
+            <div class="qr-col">
+                <div class="qrcode" id="qrcode4"></div>
+                <script type="text/javascript">
+                    new QRCode(document.getElementById("qrcode4"), {
+                        text: "http://oii.ox.ac.uk",
+                        width: 128,
+                        height: 128
+                    });
+                </script>
+            </div>
+            <div class="col-sm-8">
+                <h5>This is some serious explanation.</h5>
+                <h4>http://oii.ox.ac.uk</h4>
+            </div>
+        </div>
+        <div class="qr-row">
+            <div class="qr-col">
+                <div class="qrcode" id="qrcode5"></div>
+                <script type="text/javascript">
+                    new QRCode(document.getElementById("qrcode5"), {
+                        text: "http://oii.ox.ac.uk",
+                        width: 128,
+                        height: 128
+                    });
+                </script>
+            </div>
+            <div class="col-sm-8">
+                <h5>This is some serious explanation.</h5>
+                <h4>http://oii.ox.ac.uk</h4>
+            </div>
+        </div>
+        <div class="qr-row">
+            <div class="qr-col">
+                <div class="qrcode" id="qrcode6"></div>
+                <script type="text/javascript">
+                    new QRCode(document.getElementById("qrcode6"), {
+                        text: "http://oii.ox.ac.uk",
+                        width: 128,
+                        height: 128
+                    });
+                </script>
+            </div>
+            <div class="col-sm-8">
+                <h5>This is some serious explanation.</h5>
+                <h4>http://oii.ox.ac.uk</h4>
+            </div>
+        </div>
+    </div>
+</div>
 <script>
+
+$('.button').on('click', function() {
+    $('.overlay-blackout').fadeIn();
+    $(this).removeClass('button');
+    $('.more-content-text').show();
+    setTimeout(function () {
+        $.each($('.more-content-text > *'), function(index, value) {
+            setTimeout(function () {
+                $(value).addClass('para-shown');
+            }, (index+1)*150);
+        });
+    }, 400);
+});
+
+$('.overlay-blackout').on('click', function() {
+    $('.more-content-text').hide();
+    $('.more-content-text > *').removeClass('para-shown');
+    $('.overlay-blackout').fadeOut();
+    $('.more-content').addClass('button');
+})
+
 var mySwiper = new Swiper ('.swiper-container', {
   // Optional parameters
   direction: 'horizontal',

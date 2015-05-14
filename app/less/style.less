@@ -42,7 +42,7 @@ img {
     left:0px;
     padding:10px 15px;
     cursor:pointer;
-    z-index:999;
+    z-index:9;
     background: @brand-primary;
 }
 
@@ -51,7 +51,7 @@ img {
 }
 
 
- // Blackout layer
+ // Blackout layers
 
 .blackout {
     position:absolute;
@@ -65,6 +65,17 @@ img {
 
 }
 
+.overlay-blackout {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background: rgba(0,0,0,0.85);
+    display:none;
+    z-index:21;
+
+}
 
  // Cabinet
 
@@ -171,6 +182,7 @@ img {
     bottom:20px;
     left:60px;
     right:60px;
+    margin-bottom:80px;
     // height:70%;
 }
 
@@ -182,8 +194,8 @@ img {
 
 
 .para-shown {
-    opacity:1;
-    transform: translate(0px,0px);
+    opacity:1 !important;
+    transform: translate(0px,0px) !important;
 }
 
  // Swiper
@@ -252,4 +264,102 @@ img {
 
 .swiper-container-horizontal > .swiper-scrollbar, .swiper-pagination {
     display:none;
+}
+
+
+ // morph button
+ .more-content {
+     color:white;
+     position:absolute;
+     left:80px;
+    //  border-radius:10px;
+     right:80px;
+     bottom:200px;
+     top:200px;
+     padding:0 30px;
+     background-color: #8c1500;
+     border:0;
+     border-top:40px solid #721100;
+     z-index:999;
+     text-align: center;
+     transform:scale(1);
+     transition: all 0.7s ease-in-out;
+
+ }
+
+ .more-content h3 {
+    //  margin:0;
+     margin-bottom:2em;
+     margin-top:1em;
+     font-size:2em;
+     font-style:italic;
+     line-height:1em;
+     transition: all 0.7s ease-in-out;
+ }
+
+ .more-close {
+     position:absolute;
+     top:0px;
+     right:10px;
+     cursor:pointer;
+ }
+
+ .more-content.button {
+    //  position:initial;
+    padding:0px;
+    left:400px;
+    right:400px;
+     bottom:30px;
+     top:1810px;
+     border:1px solid #721100;
+     transition: all 0.7s ease-in-out;
+     cursor:pointer;
+     transform: scale(0.8);
+ }
+
+ .more-content.button h3 {
+     margin:0;
+     font-size:1em;
+     line-height:2.8em;
+ }
+
+ .more-content.button .more-close {
+     display:none;
+ }
+
+
+ .more-content.button:hover {
+     background-color: lighten(#8c1500,5%);
+     border-color: #721100;
+ }
+
+ .more-content-text {
+     display:none;
+     text-align:left;
+ }
+
+ .more-content-text > * {
+     opacity:0;
+     transform: translate(0px,-200px);
+     transition: all 0.4s ease-in-out;
+ }
+
+ .more-content-text h4, .more-content-text h5 {
+     margin:0;
+ }
+
+
+.qr-col {
+    width:155px;
+    float:left;
+}
+
+.qr-row {
+    width:100%;
+    margin-bottom:60px;
+    display:table;
+}
+
+.qrcode {
+    text-align:center;
 }

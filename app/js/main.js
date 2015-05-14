@@ -49,17 +49,17 @@ var App = function App() {
   app.openOverlay = function() {
 
       // Ajax load the item content into the container div
-      $('.item-content').load("../items/"+currentItem+".html", function() {
-          $(".swiper-container").hide();
+      $('.item-content').load('../items/'+currentItem+'.html', function() {
+          $('.swiper-container').hide();
           // Once we are finished loading, set up the animation stuff
           setTimeout(function () {
-              $("."+currentItem).toggleClass('active');
+              $('.'+currentItem).toggleClass('active');
               $('.overlay').toggleClass('active');
               opening = false;
               overlayOpen = true;
               setTimeout(function () {
-                  $("."+currentItem).fadeOut();
-                  $(".swiper-container").fadeIn();
+                  $('.'+currentItem).fadeOut();
+                  $('.swiper-container').fadeIn();
                   $.each($('.content-row > *'), function(index, value) {
                       setTimeout(function () {
                           $(value).addClass('para-shown');
@@ -71,9 +71,9 @@ var App = function App() {
   };
 
   app.closeOverlay = function() {
-      $(".swiper-container").hide();
-      $("."+currentItem).fadeIn();
-      $("."+currentItem).toggleClass('active');
+      $('.swiper-container').hide();
+      $('.'+currentItem).fadeIn();
+      $('.'+currentItem).toggleClass('active');
       $('.overlay').toggleClass('active');
       $('.content-row > *').removeClass('para-shown');
       setTimeout(function () {

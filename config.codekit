@@ -3383,6 +3383,80 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/app\/bower_components\/qrcodejs\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/bower_components\/qrcodejs\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/app\/bower_components\/qrcodejs\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/app\/bower_components\/qrcodejs\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/bower_components\/qrcodejs\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/app\/bower_components\/qrcodejs\/jquery.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/bower_components\/qrcodejs\/jquery.min.js",
+		"outputAbbreviatedPath": "\/app\/bower_components\/qrcodejs\/min\/jquery.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/app\/bower_components\/qrcodejs\/qrcode.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/bower_components\/qrcodejs\/qrcode.js",
+		"outputAbbreviatedPath": "\/app\/bower_components\/qrcodejs\/min\/qrcode-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/app\/bower_components\/qrcodejs\/qrcode.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/bower_components\/qrcodejs\/qrcode.min.js",
+		"outputAbbreviatedPath": "\/app\/bower_components\/qrcodejs\/min\/qrcode.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/app\/bower_components\/qrcodejs\/README.md": {
+		"criticStyle": 0,
+		"enableFootnotes": 1,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/bower_components\/qrcodejs\/README.md",
+		"maskEmailAddresses": 1,
+		"outputAbbreviatedPath": "\/app\/bower_components\/qrcodejs\/README.html",
+		"outputFormat": 0,
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
 	"\/app\/bower_components\/swiper\/bower.json": {
 		"fileType": 524288,
 		"ignore": 1,
@@ -4006,6 +4080,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/app\/img\/champions.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.02106e+06,
+		"inputAbbreviatedPath": "\/app\/img\/champions.png",
+		"outputAbbreviatedPath": "\/app\/img\/champions.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/app\/img\/filbert.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -4013,6 +4098,17 @@
 		"initialSize": 309681,
 		"inputAbbreviatedPath": "\/app\/img\/filbert.jpg",
 		"outputAbbreviatedPath": "\/app\/img\/filbert.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/app\/img\/filbert.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/app\/img\/filbert.png",
+		"outputAbbreviatedPath": "\/app\/img\/filbert.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -4061,6 +4157,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/app\/img\/prop1_large.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 198643,
+		"inputAbbreviatedPath": "\/app\/img\/prop1_large.png",
+		"outputAbbreviatedPath": "\/app\/img\/prop1_large.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/app\/img\/prop2.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -4101,6 +4208,17 @@
 		"initialSize": 374558,
 		"inputAbbreviatedPath": "\/app\/img\/prop3.png",
 		"outputAbbreviatedPath": "\/app\/img\/prop3.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/app\/img\/SPL_7955.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3.12598e+06,
+		"inputAbbreviatedPath": "\/app\/img\/SPL_7955.jpg",
+		"outputAbbreviatedPath": "\/app\/img\/SPL_7955.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -4204,6 +4322,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
+		},
+	"\/buildTmp\/credits.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/buildTmp\/credits.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/dist\/MacOS32\/cabinet.app\/Contents\/Resources\/app.nw\/bower.json": {
 		"fileType": 524288,
