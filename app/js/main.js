@@ -49,34 +49,39 @@ var App = function App() {
   app.openOverlay = function() {
 
       // Ajax load the item content into the container div
-      $('.item-content').load( "../items/"+currentItem+".html", function() {
+      $('.item-content').load("../items/"+currentItem+".html", function() {
+          $(".swiper-container").hide();
           // Once we are finished loading, set up the animation stuff
           setTimeout(function () {
               $("."+currentItem).toggleClass('active');
               $('.overlay').toggleClass('active');
               opening = false;
               overlayOpen = true;
-              $('.cabinet-item').removeClass('front');
               setTimeout(function () {
+                  $("."+currentItem).fadeOut();
+                  $(".swiper-container").fadeIn();
                   $.each($('.content-row > *'), function(index, value) {
                       setTimeout(function () {
                           $(value).addClass('para-shown');
-                      }, (index+2)*350);
+                      }, (index+2)*250);
                   });
-              }, 400);
-          }, 400);
+              }, 1000);
+          }, 0);
       });
   };
 
   app.closeOverlay = function() {
+      $(".swiper-container").hide();
+      $("."+currentItem).fadeIn();
       $("."+currentItem).toggleClass('active');
       $('.overlay').toggleClass('active');
       $('.content-row > *').removeClass('para-shown');
       setTimeout(function () {
           opening = false;
           overlayOpen = false;
-          $('.cabinet-item').removeClass('front');
-          $('.blackout').fadeOut();
+          $.when($('.blackout').fadeOut()).done(function(){
+              $('.cabinet-item').removeClass('front');
+          });
       }, 1000);
   };
 
