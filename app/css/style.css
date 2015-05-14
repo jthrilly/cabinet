@@ -8926,6 +8926,7 @@ img {
 .icon-color {
   color: #fff;
 }
-.swiper-container-horizontal > .swiper-scrollbar {
+.swiper-container-horizontal > .swiper-scrollbar,
+.swiper-pagination {
   display: none;
 }
