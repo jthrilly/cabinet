@@ -8773,9 +8773,9 @@ img {
   margin: 0 auto;
 }
 .cabinet-item.item-1 {
-  -webkit-transform: translate(-290px, -85px) scale(0.5);
-      -ms-transform: translate(-290px, -85px) scale(0.5);
-          transform: translate(-290px, -85px) scale(0.5);
+  -webkit-transform: translate(-290px, -105px) scale(0.5);
+      -ms-transform: translate(-290px, -105px) scale(0.5);
+          transform: translate(-290px, -105px) scale(0.5);
 }
 .cabinet-item.item-2 {
   -webkit-transform: translate(260px, -88px) scale(0.5);
