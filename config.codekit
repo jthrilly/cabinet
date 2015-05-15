@@ -4520,6 +4520,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/app\/img\/prop7.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 605962,
+		"inputAbbreviatedPath": "\/app\/img\/prop7.png",
+		"outputAbbreviatedPath": "\/app\/img\/prop7.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/app\/img\/prop7_large.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 647025,
+		"inputAbbreviatedPath": "\/app\/img\/prop7_large.png",
+		"outputAbbreviatedPath": "\/app\/img\/prop7_large.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/app\/img\/prop8.png": {
 		"fileType": 32768,
 		"ignore": 0,

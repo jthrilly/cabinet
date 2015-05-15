@@ -8803,9 +8803,9 @@ img {
           transform: translate(260px, 847px) scale(0.5);
 }
 .cabinet-item.item-7 {
-  -webkit-transform: translate(-290px, 1347px) scale(0.5);
-      -ms-transform: translate(-290px, 1347px) scale(0.5);
-          transform: translate(-290px, 1347px) scale(0.5);
+  -webkit-transform: translate(-290px, 1390px) scale(0.5);
+      -ms-transform: translate(-290px, 1390px) scale(0.5);
+          transform: translate(-290px, 1390px) scale(0.5);
 }
 .cabinet-item.item-8 {
   -webkit-transform: translate(260px, 1340px) scale(0.5);
@@ -8946,8 +8946,8 @@ img {
   position: absolute;
   left: 80px;
   right: 80px;
-  bottom: 200px;
-  top: 200px;
+  bottom: 400px;
+  top: 400px;
   padding: 0 30px;
   background-color: #8c1500;
   border: 0;
