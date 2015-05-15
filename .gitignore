@@ -4,3 +4,4 @@ buildTmp/
 resources/
 dist/
 .DS_Store
+*.webm
